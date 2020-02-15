@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.pdf
+*.png
+auto
+stemmas
+.DS_Store

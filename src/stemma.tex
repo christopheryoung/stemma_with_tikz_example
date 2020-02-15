@@ -1,0 +1,69 @@
+\input{src/header.tex}
+\begin{document}
+\begin{tikzpicture}
+\input{src/grid.tex}
+  
+  \node (title) at (-15, 11.5) [align=left]{\textbf{\Large{Stemma Title}}};
+  \node (Source) at (-12, 12.5) {};
+  \node (root) at (-12, 11) {(Ψ)};
+  \node (rootlabel) at (-10.4, 11) [align=left]{hyparchetype\\of \textit{Text} MSS};
+  \draw[-] (Source) -- (root);
+
+  \node (α) at (-13, 10) {(α)};
+  \draw[-] (root) -- (α);
+  \node (A) at (-12.5, 8) {\textbf{A}};
+  \draw[-] (α) -- (A);
+  \node (ε) at (-14, 8){(ε)};
+  \draw[-] (α) -- (ε);
+  \node (η) at (-15, 6) {(η)};
+  \draw[-] (ε) -- (η);
+  \node (β) at (-15, 4) {\textbf{B}};
+  \draw[-] (η) -- (β);
+
+  \node (simToγ) at (-15, 8.5) [align=left, execute at begin
+  node=\setlength{\baselineskip}{2.8ex}]{
+    a MS\\
+    similar\\
+    to γ};
+  \draw[dotted] (simToγ) -- (η);
+  \node (J) at (-12.5, 2) [align=left]{\textbf{J}};
+  \draw[-] (ε) -- (J);
+
+  \node (β) at (-10, 8) {(β)};
+  \draw[-] (root) -- (β);
+  \node (H) at (-11, 5){\textbf{H}};
+  \draw[-] (β) -- (H);
+  \node (P) at (-9.5, 5) {\textbf{P}};
+  \draw[-] (β) -- (P);
+  \node (M) at (-9.5, 1) {\textbf{M}};
+  \draw[-] (P) -- (M);
+
+  \node (γ) at (-7, 5) {(γ)};
+  \node (L) at (-7, 3) {\textbf{L}};
+  \draw[-] (γ) -- (L);
+  \node (ζ) at (-8, 4) {(ζ)};
+  \draw[-] (γ) -- (ζ);
+  \node (O) at (-8, 3) {\textbf{O}};
+  \draw[-] (ζ) -- (O);
+  \node (N) at (-6, 2) {\textbf{N}};
+  \draw[-] (γ) -- (N);
+
+  \draw[\arrowstyle] (β) -- (γ);
+  \draw[dotted] (α) -- (ζ);
+
+  \node (sigla) at (-6, 9) [align=left, execute at begin
+  node=\setlength{\baselineskip}{4ex}]{
+    \textbf{Sigla} \\
+    \textbf{A} = MSS Description \\
+    \textbf{B} = MSS Description \\
+    \textbf{J} = MSS Description \\
+    \textbf{H} = MSS Description \\
+    \textbf{M} = MSS Description \\
+    \textbf{N} = MSS Description \\
+    \textbf{L} = MSS Description \\
+    \textbf{O} = MSS Description \\
+    \textbf{P} = MSS Description \\    
+  };
+
+\end{tikzpicture}
+\end{document}

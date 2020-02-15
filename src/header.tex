@@ -1,0 +1,17 @@
+% !TeX program = LuaLaTeX
+\ifdefined\png
+\documentclass[convert={density=300,size=1080x800,outext=.png}]{standalone}
+\else
+\documentclass{article}
+\fi
+\usepackage[landscape]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage[utf8]{inputenc}
+\usepackage[polutonikogreek,english]{babel}
+\usepackage{ebgaramond}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\newcommand{\arrowstyle}{-{Latex[length=3mm, width=3mm]}}
+\usepackage{pgffor}
+

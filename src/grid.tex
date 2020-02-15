@@ -1,0 +1,16 @@
+\ifdefined\drawgrid
+  % grid
+  \foreach \n in {-18,...,5}{
+    \node (\n xtop) at (\n, 13) {\n x};
+    \node (\n xbottom) at (\n, 0) {};
+    \draw[dotted](\n xtop) -- (\n xbottom);
+  }
+
+  \foreach \n in {13,...,0}{
+    \node (\n ytop) at (-20, \n) {\n y};
+    \node (\n ybottom) at (2, \n) {};
+    \draw[dotted](\n ytop) -- (\n ybottom);
+  }
+  % endgrid
+\else
+\fi
